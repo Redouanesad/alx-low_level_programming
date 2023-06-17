@@ -24,7 +24,7 @@ int main(void)
 				putchar((firstDigit % 10) + 48);
 				putchar(' ');
 				putchar((soconDigit / 10) + 48);
-				putchar((seconDigit / 10) + 48);
+				putchar((seconDigit % 10) + 48);
 
 				if (firstDigit != 98 || seconDigit != 99)
 				{
