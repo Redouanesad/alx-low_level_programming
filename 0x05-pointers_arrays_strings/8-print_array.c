@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * print_array - prints n elements of an array of integers
- *		followed by new line
+ * print_array - prints n elements of an array of integers.
  *
  * @n: elements parameter input
  * @a: string parameter input
@@ -18,7 +17,7 @@ void print_array(int *a, int n)
 		if (i != (n - 1))
 			printf("%d, ", a[i]);
 		else
-			prinf("%d", a[i]);
+			printf("%d", a[i]);
 	}
 	printf("\n");
 }
