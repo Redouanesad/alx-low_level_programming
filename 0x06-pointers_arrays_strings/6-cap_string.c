@@ -1,29 +1,33 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * isLower - determintes whether ascii is lowercase
- * @c: character
- * Return: 1 if true, 0 if false
+ * cap_string - capitalazes every word of a string
+ * @s: string to modify
+ *
+ * Return: the resulting string
 */
-int isLower(char c)
+char *cap_string(char *s)
 {
-	return (c >= 97 && c <= 122);
-}
+	int i, j;
 
-/**
- * isDelimiter - determinates whether ascii is  delimiter
- * @c: character
- * Return: 1 if true, 0 if false
-*/
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+			'!', '?', '"', '(', ')', '{', '}'};
 
-int isDelimiter(char c)
-{
-	int i;
-	char delimiter[] = " \t\n,.!?\"( ) { }";
+	for (i = 0; s[i]; != '\0'; i++)
+	{
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
 
-	for (i = 0; i < 12; i++)
-		if (c == delimiter[i])
-			return (1);
-	return (0);
+		for (j = 0; j < 13; j++)
+		{
+			if (s[i] == ape[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
+			}
+		}
+	}
+	return (s);
 }
