@@ -1,4 +1,30 @@
 #include "main.h"
+#include <stdio.h>
+
+/**
+ * isLower - determinates whether ascii is lowercase
+ * @c: character
+ * Return:1 if true, 0 if false
+*/
+int isLower(char c)
+{
+	return (c >= 97 && c <= 122);
+}
+/**
+ * isDelimiter - determinates whether ascii is a delimiter
+ * @c: character
+ * Return: 1 if true, 0if false
+*/
+int isDelimiter(char c)
+{
+	int i;
+	char delimiter[] = " \t\n,.!?\"(){}";
+
+	for (i = 0; i < 12; i++)
+		if (c == delimiter[i])
+			return (1);
+	return (0);
+}
 
 /**
  * cap_string - capitalazes every word of a string
@@ -8,26 +34,22 @@
 */
 char *cap_string(char *s)
 {
-	int i, j;
+	char *ptr = s;
+	int foundDelimit = 1;
 
-	char spe[13] = {' ', '\t', '\n', ',', ';',
-		'.', '!', '?', '"', '(', ')', '{', '}'};
-
-	for (i = 0; s[i]; != '\0'; i++)
+	while (*s)
 	{
-		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
-
-		for (j = 0; j < 13; j++)
+		if (isDelimiter(*s))
+			foundDelimit = 1;
+		else if (isLower(*s) && foumdDelimit)
 		{
-			if (s[i] == ape[j])
-			{
-				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-				{
-					s[i + 1] -= 32;
-				}
-			}
+			*s -= 32;
+			foundDelimit = 0;
 		}
+		else
+			foundDelimit = 0;
+		s++;
 	}
-	return (s);
+	return (ptr);
+
 }
