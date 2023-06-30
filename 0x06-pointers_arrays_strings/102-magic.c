@@ -5,8 +5,6 @@
  * Return: 0
 */
 
-#include <stdio.h>
-
 int main(void)
 {
 	int n;
