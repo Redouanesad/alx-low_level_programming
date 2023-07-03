@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _strpn - function that gets the length of a prefix substing
+ * _strspn - function that gets the length of a prefix substing
  * @s: string
  * @accept: bytes
  * Return: insigned int
 */
 
-unsigned int _strpn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int itr, jtr;
 
