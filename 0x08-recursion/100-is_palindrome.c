@@ -7,7 +7,7 @@
  * Return: int
 */
 
-int is_palidrome(char *s);
+int is_palindrome(char *s);
 int check(char *s, int start, int end, int mod);
 int last_index(char *s)
 {
@@ -19,18 +19,18 @@ int last_index(char *s)
 	return (n);
 }
 /**
- * is_palidrome - check if a string is a palidrome
+ * is_palindrome - check if a string is a palindrome
  * @s: string to check
  * Return: 0 or 1
 */
-int is_palidrome(char *s)
+int is_palindrome(char *s)
 {
 	int end = last_index(s);
 
 	return (check(s, 0, end - 1, end % 2));
 }
 /**
- * check - checker for the palidrome
+ * check - checker for the palindrome
  * @s: string
  * @start: int moves from right to left
  * @end: int movees from left to right
