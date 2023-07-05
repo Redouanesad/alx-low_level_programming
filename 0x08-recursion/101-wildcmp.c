@@ -12,10 +12,11 @@ char *move_past_star(char *s2)
 	else
 		return (s2);
 }
-/***
+/**
  * inception - makes magic a reality
  * @s1: the first string
  * @s2: the second string, can contain wildcard
+ *
  * Return: 1 if identical, 0 if else
 */
 int inception(char *s1, char *s2)
