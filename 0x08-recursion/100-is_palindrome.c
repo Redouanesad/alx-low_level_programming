@@ -6,6 +6,7 @@
  * @s: pointer to string
  * Return: int
 */
+
 int is_palidrome(char *s);
 int check(char *s, int start, int end, int mod);
 int last_index(char *s)
