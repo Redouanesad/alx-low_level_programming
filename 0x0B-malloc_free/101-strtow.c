@@ -32,8 +32,7 @@ int wrdcnt(char *s)
 
 char **strtow(char *str)
 {
-	int i, j, k;
-	int l, n = 0, wc = 0;
+	int i, j, k, l, n = 0, wc = 0;
 	char **w;
 
 	if (str == NULL || *str == '\0')
