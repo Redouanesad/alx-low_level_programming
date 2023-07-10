@@ -16,11 +16,12 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
+
 	for (; str[size] != '\0'; size++)
 	;
 
 	/* +1 on the size puts the end of a string character*/
-	m = malloc(sizeof(*str) + 1);
+	m = malloc(size * sizeof(*str) + 1);
 
 	if (m == 0)
 		return (NULL);
