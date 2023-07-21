@@ -58,8 +58,8 @@ void print_all(const char * const format, ...)
 		{"s", format_string,
 		{"NULL", "NULL"}
 	};
-	va_start(ap, n);
-	while (format && formt[i])
+	va_start(ap, format);
+	while (format && format[i])
 	{
 		j = 0;
 		while (tokens[j].token)
