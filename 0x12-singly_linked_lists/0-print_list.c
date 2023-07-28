@@ -1,4 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
+
 
 /**
  * print_list - check the code for Holberton School Students
